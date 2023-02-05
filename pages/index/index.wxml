@@ -1,23 +1,44 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!-- 搜索栏 -->
+<view>
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" />
+</view>
+<view>
+  <scroll-view scroll-y="true">
+    <!-- 轮播图 -->
+    <view>
+      <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+        <block wx:for="{{scrolls}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!-- 分类专区 -->
+    <van-grid column-num="4">
+      <van-grid-item icon="/images/category/shucai.png" text="蔬菜"/>
+      <van-grid-item icon="/images/category/shuiguoshucai.png" text="水果"/>
+      <van-grid-item icon="/images/category/rouqindanlei-2.png" text="肉禽蛋类"/>
+      <van-grid-item icon="/images/category/liangyoumimian-2.png" text="粮油米面"/>
+      <van-grid-item icon="/images/category/xiuxianshipin.png" text="休闲食品"/>
+      <van-grid-item icon="/images/category/ganhuotiaowei-2.png" text="干货调味"/>
+      <van-grid-item icon="/images/category/tese.png" text="特色帮扶"/>
+      <van-grid-item icon="/images/category/qita.png" text="其它商品"/>
+    </van-grid>
+    <!-- 消息资讯 -->
+    <van-notice-bar left-icon="volume-o" text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。" />
+    <!-- 推荐商品 -->
+    <view wx:for="{{10}}">
+      <van-card price="2.00" desc="轻薄折叠机,整机轻至262g,展开厚度5.4mm,骁龙8+旗舰处理器!【点击抢购小米11Ultra】"
+        title="小米MIX Fold2 轻薄折叠 骁龙8+旗舰处理器 徕卡光学镜头 自研微水滴形态转轴 12GB+512GB 月影黑 5G手机" thumb="/images/case-01.jpg">
+        <view slot="footer">
+          <van-button size="small">加入购物车</van-button>
+        </view>
+      </van-card>
+    </view>
+    <!-- 底部 -->
+    <van-divider contentPosition="center" customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;">
+      文本
+    </van-divider>
+  </scroll-view>
 </view>

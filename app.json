@@ -1,15 +1,32 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/category/index",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "Mini-Farm扶农助农",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home-off.png",
+        "selectedIconPath": "images/home-on.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home-off.png",
+        "selectedIconPath": "images/home-on.png"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
 }

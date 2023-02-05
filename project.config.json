@@ -12,7 +12,7 @@
     "minified": true,
     "newFeature": false,
     "coverView": true,
-    "nodeModules": false,
+    "nodeModules": true,
     "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
@@ -34,15 +34,19 @@
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
-    "packNpmManually": false,
-    "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "bundle": false
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./"
+      }
+    ],
+    "minifyWXSS": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.30.0",
   "appid": "wx9f1145c5e6f28e38",
-  "projectname": "Mini-Farm-Front",
+  "projectname": "Mini-Farm-WeChat",
   "debugOptions": {
     "hidedInDevtools": []
   },

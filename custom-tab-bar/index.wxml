@@ -1,0 +1,6 @@
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item icon="wap-home">首页</van-tabbar-item>
+  <van-tabbar-item icon="bars" info="5">分类</van-tabbar-item>
+  <van-tabbar-item icon="shopping-cart" info="5">购物车</van-tabbar-item>
+  <van-tabbar-item icon="manager" dot>我的</van-tabbar-item>
+</van-tabbar>
