@@ -16,12 +16,12 @@
     </view>
     <!-- 分类专区 -->
     <van-grid column-num="4">
-      <van-grid-item icon="/images/category/shucai.png" text="蔬菜"/>
-      <van-grid-item icon="/images/category/shuiguoshucai.png" text="水果"/>
+      <van-grid-item icon="/images/category/shucai.png" text="蔬菜水果"/>
       <van-grid-item icon="/images/category/rouqindanlei-2.png" text="肉禽蛋类"/>
       <van-grid-item icon="/images/category/liangyoumimian-2.png" text="粮油米面"/>
       <van-grid-item icon="/images/category/xiuxianshipin.png" text="休闲食品"/>
       <van-grid-item icon="/images/category/ganhuotiaowei-2.png" text="干货调味"/>
+      <van-grid-item icon="/images/category/xianshimiaosha.png" text="限时秒杀"/>
       <van-grid-item icon="/images/category/tese.png" text="特色帮扶"/>
       <van-grid-item icon="/images/category/qita.png" text="其它商品"/>
     </van-grid>
