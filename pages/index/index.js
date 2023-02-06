@@ -12,7 +12,6 @@ Page({
   onShow(){
     if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {
-        console.log("show-------------")
       this.getTabBar().setData({
         active: 0
       })

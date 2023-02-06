@@ -1,2 +1,20 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<!-- 购物车商品列表 -->
+<scroll-view scroll-y="true">
+  <view wx:for="{{10}}">
+    <van-card price="2.00" desc="轻薄折叠机,整机轻至262g,展开厚度5.4mm,骁龙8+旗舰处理器!【点击抢购小米11Ultra】"
+      title="小米MIX Fold2 轻薄折叠 骁龙8+旗舰处理器 徕卡光学镜头 自研微水滴形态转轴 12GB+512GB 月影黑 5G手机" thumb="/images/case-01.jpg">
+      <view slot="footer">
+        <van-stepper slot="num" value="{{ 1 }}" bind:change="onChange" />
+      </view>
+    </van-card>
+  </view>
+      <!-- 底部 -->
+      <van-divider contentPosition="center" customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;">
+      底部
+    </van-divider>
+    <van-divider contentPosition="center" customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;">
+      底部
+    </van-divider>
+</scroll-view>
+    <!-- 去结算栏 -->
+    <van-submit-bar price="{{ 3050 }}" button-text="去结算" bind:submit="onSubmit" />

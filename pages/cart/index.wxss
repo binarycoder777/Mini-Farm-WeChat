@@ -1,1 +1,5 @@
 /* pages/cart/index.wxss */
+.van-submit-bar{
+  position: fixed;
+  bottom: 96rpx !important;
+}

@@ -1,2 +1,25 @@
-<!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+<!-- 个人信息 -->
+<view class="container">
+  <image src="/images/avater.jpg" class="avatar"/>
+  <text class="username">羁绊</text>
+</view>
+<!-- 我的订单 -->
+<van-divider contentPosition="center">我的订单</van-divider>
+<view>
+  <van-grid column-num="5">
+    <van-grid-item icon="/images/order/daifukuan.png" text="待付款" />
+    <van-grid-item icon="/images/order/daifahuo.png" text="待发货" />
+    <van-grid-item icon="/images/order/daishouhuo.png" text="待收货" />
+    <van-grid-item icon="/images/order/daipingjia.png" text="待评价" />
+    <van-grid-item icon="/images/order/shouhou.png" text="售后" />
+  </van-grid>
+</view>
+<!-- 其他信息 -->
+<view>
+  <van-cell is-link title="我的优惠卷" link-type="navigateTo" url="/pages/dashboard/index" />
+  <van-cell is-link title="积分兑换" link-type="navigateTo" url="/pages/dashboard/index" />
+  <van-cell is-link title="地址管理" link-type="navigateTo" url="/pages/dashboard/index" />
+  <van-cell is-link title="用户设置" link-type="navigateTo" url="/pages/dashboard/index" />
+  <van-cell is-link title="在线客服" link-type="navigateTo" url="/pages/dashboard/index" />
+  <van-cell is-link title="关于我们" link-type="navigateTo" url="/pages/dashboard/index" />
+</view>

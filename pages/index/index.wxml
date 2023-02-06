@@ -38,7 +38,7 @@
     </view>
     <!-- 底部 -->
     <van-divider contentPosition="center" customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;">
-      文本
+      底部
     </van-divider>
   </scroll-view>
 </view>
