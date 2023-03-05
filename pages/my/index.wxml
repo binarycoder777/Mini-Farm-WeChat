@@ -1,13 +1,10 @@
 <!-- 个人信息 -->
-<view class="container" wx:if="{{userName != null}}">
-  <image src="{{pic}}" class="avatar"/>
-  <view class="username">{{nickName}}</view>
+<view class="container">
+  <button class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </button>
+  <input type="nickname" class="username" placeholder="请输入昵称" />
 </view>
-<view class="container" wx:else>
-  <image src="/images/weixindenglu.png" class="avatar"/>
-  <view class="username" bindtap="tapLogin">点击登录</view>
-</view>
-<!-- </view> -->
 <!-- 我的订单 -->
 <van-divider contentPosition="center">我的订单</van-divider>
 <view>

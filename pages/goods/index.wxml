@@ -1,0 +1,59 @@
+<view class="container">
+  <view class="scroll-pic">
+    <view>
+      <van-tabs active="{{ active }}" bind:change="onChange">
+        <van-tab title="简介"></van-tab>
+        <van-tab title="详情"></van-tab>
+        <van-tab title="评价"></van-tab>
+        <van-tab title="推荐"></van-tab>
+      </van-tabs>
+    </view>
+    <view>
+      <scroll-view scroll-y="true">
+        <!-- 轮播图 -->
+        <view>
+          <swiper class="desc-pic" indicator-dots="true" autoplay="true" interval="5000" duration="500">
+            <block wx:for="{{scrolls}}" wx:key="*this">
+              <swiper-item>
+                <image src="{{item}}"></image>
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="desc-card">
+    <view class="desc-card-parent">
+      <text>￥90.00</text>
+      <text style=" padding-left: 50%;">销量:1902</text>
+      <view class="desc-card-son">
+        <view class="van-multi-ellipsis--l2">小米MIX Fold2 轻薄折叠 骁龙8+旗舰处理器 徕卡光学镜头 自研微水滴形态转轴 12GB+512GB 月影黑 5G手机</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <van-cell-group>
+      <van-cell center is-link title="送至" icon="location-o" value="重庆理工大学" link-type="navigateTo"
+        url="/pages/dashboard/index" />
+      <van-cell is-link title="优惠" icon="coupon-o" value="满100-10优惠卷" link-type="navigateTo"
+        url="/pages/dashboard/index" />
+      <van-cell is-link title="评价" icon="comment-o" value="" link-type="navigateTo" url="/pages/dashboard/index" />
+    </van-cell-group>
+  </view>
+  <van-cell icon="eye-o" title="详情" />
+  <!-- 商品详情---图片描述 -->
+  <view class="desc-pic">
+    <view wx:for="{{5}}">
+      <van-image width="100%" height="150px" lazy-load src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    </view>
+  </view>
+  <!-- 购物栏 -->
+  <van-goods-action>
+    <van-goods-action-icon icon="chat-o" text="客服" dot />
+    <van-goods-action-icon icon="cart-o" text="购物车" info="5" />
+    <van-goods-action-button text="加入购物车" type="warning" />
+    <van-goods-action-button text="立即购买" />
+  </van-goods-action>
+  <!-- 推荐栏 -->
+</view>

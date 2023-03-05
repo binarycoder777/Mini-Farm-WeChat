@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-pic,.desc-pic {
+  height: 290px;
+}
+
+.custom-image {
+  width: 100%;
+}
+
+
+.desc-card {
+  display: flex;
+  justify-content: center;
+}
+
+.desc-card-parent {
+  margin-top: 5px;
+  position:relative;
+  border-radius: 10px;
+  background: linear-gradient(to right, rgba(233, 229, 229, 0.911),pink);
+  height: 80px;
+  width: 90%;
+  margin-bottom: 5px;
+}
+
+/* .desc-card-son{
+  background-color: white;
+  height: 65%;
+  width: 100%;
+  position: absolute;
+  border-radius: 10px;
+  z-index: 2;
+}  */
+.van-multi-ellipsis--l2 {
+  margin-bottom: 15px;
+}
+

@@ -1,19 +1,30 @@
 // pages/my/index.js
+
+const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    avatarUrl: defaultAvatarUrl,
     userName: null,
     userInfo: {}
+  },
+
+  onChooseAvatar(e) {
+    console.log(e)
+    const { avatarUrl } = e.detail 
+    this.setData({
+      avatarUrl,
+    })
   },
 
   /**
    * 点击登录
    */
   tapLogin: function () {
-    console.log("start----------")
     wx.getUserProfile({
       desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
@@ -23,15 +34,17 @@ Page({
     // 调用开放接口登录
     wx.login({
       success(res) {
+        console.log(res.code)
         if (res.code) {
           console.log('登录成功')
-          //发起网络请求
-          // wx.request({
-          //   url: 'https://example.com/onLogin',
-          //   data: {
-          //     code: res.code
-          //   }
-          // })
+          // 发起网络请求
+          wx.request({
+            url: 'http:127.0.0.1:8001/api/user/login',
+            data: {
+              loginType: "VX",
+              code: res.code
+            }
+          })
         } else {
           console.log('登录失败！' + res.errMsg)
         }
@@ -39,6 +52,9 @@ Page({
     })
   },
 
+  onLoad: function() {
+    this.tapLogin()
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -70,7 +86,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    
   },
 
   /**
