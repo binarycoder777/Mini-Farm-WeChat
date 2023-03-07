@@ -33,11 +33,12 @@
     </view>
   </view>
   <view>
+    <!-- 选型栏 -->
     <van-cell-group>
-      <van-cell center is-link title="送至" icon="location-o" value="重庆理工大学" link-type="navigateTo"
-        url="/pages/dashboard/index" />
-      <van-cell is-link title="优惠" icon="coupon-o" value="满100-10优惠卷" link-type="navigateTo"
-        url="/pages/dashboard/index" />
+      <van-action-sheet  title="配送至" show="{{ show }}" actions="{{ actions }}" overlay="true" cancel-text="选择其他地址"  bind:select="onSelect" bind:close="onClose"/>
+      <van-cell center  title="送至" icon="location-o" value="重庆理工大学"  bindtap="onClose"/>
+
+      <van-cell title="优惠" icon="coupon-o" value="满100-10优惠卷"/>
       <van-cell is-link title="评价" icon="comment-o" value="" link-type="navigateTo" url="/pages/dashboard/index" />
     </van-cell-group>
   </view>

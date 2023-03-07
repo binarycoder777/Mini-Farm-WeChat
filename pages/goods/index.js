@@ -7,6 +7,35 @@ Page({
   data: {
     scrolls: ['/images/scroll-01.jpg','/images/scroll-02.jpg','/images/scroll-03.jpg'],
     images: ['/images/home-off.png', '/images/home-on.png', '/images/home-on.png'],
+    // 地址选中
+    show: false,
+    actions: [
+      {
+        name: '重庆理工大学',
+        subname: '花溪校区',
+      },
+      {
+        name: '重庆理工大学',
+        subname: '杨家坪校区',
+      },
+      {
+        name: '重庆理工大学',
+        subname: '两江校区',
+      },
+    ]
+  },
+
+  onClose: function(params) {
+    if (this.data.show) {
+      this.setData({ show: false })
+    }else {
+      this.setData({ show: true })
+    }
+    
+  },
+
+  onSelect: function(event) {
+    console.log(event.detail);
   },
 
   /**
