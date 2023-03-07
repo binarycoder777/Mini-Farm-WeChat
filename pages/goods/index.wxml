@@ -39,10 +39,10 @@
       <van-cell center  title="送至" icon="location-o" value="重庆理工大学"  bindtap="onClose"/>
 
       <van-cell title="优惠" icon="coupon-o" value="满100-10优惠卷"/>
-      <van-cell is-link title="评价" icon="comment-o" value="" link-type="navigateTo" url="/pages/dashboard/index" />
+      <van-cell title="评价" icon="comment-o" value="评论数:1023条"/>
     </van-cell-group>
   </view>
-  <van-cell icon="eye-o" title="详情" />
+  <van-divider contentPosition="center">详情</van-divider>
   <!-- 商品详情---图片描述 -->
   <view class="desc-pic">
     <view wx:for="{{5}}">
