@@ -1,8 +1,13 @@
 <!--pages/order/index.wxml-->
-<van-cell center title="重庆理工大学" value="重庆市重庆理工大学花溪校区" label="韦滔 183***1670" />
-<view wx:for="{{10}}">
-  <van-card price="2.00" num="10" title="轻薄折叠机,整机轻至262g,展开厚度5.4mm,骁龙8+旗舰处理器!【点击抢购小米11Ultra】" thumb="/images/case-01.jpg">
-          </van-card>
+<view id="order-item">
+  <van-cell center
+  is-link  link-type="navigateTo"
+  url="/pages/address/index" title="重庆理工大学" value="重庆市重庆理工大学花溪校区" label="韦滔 183***1670"/>
+  <view wx:for="{{10}}">
+    <van-card price="2.00" num="10" title="轻薄折叠机,整机轻至262g,展开厚度5.4mm,骁龙8+旗舰处理器!【点击抢购小米11Ultra】"
+      thumb="/images/case-01.jpg">
+    </van-card>
+  </view>
 </view>
 
 <van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onClickButton" tip="{{ true }}">

@@ -1,50 +1,36 @@
 <!-- 购物车商品列表 -->
-<view class="page-section">
-  <view class="page-section-title">推荐展示样式</view>
-  <view class="weui-cells weui-cells_after-title">
-    <checkbox-group bindchange="checkboxChange">
-      <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
-        <view class="weui-cell__hd">
-          <checkbox value="{{item.value}}" checked="{{item.checked}}" />
-        </view>
-        <van-swipe-cell id="swipe-cell" right-width="{{ 65 }}" async-close bind:close="onClose">
-          <van-card price="2.00" title="轻薄折叠机,整机轻至262g,展开厚度5.4mm,骁龙8+旗舰处理器!【点击抢购小米11Ultra】" thumb="/images/case-01.jpg">
-            <view slot="footer">
-              <van-stepper value="{{ 1 }}" bind:change="onChange" />
+<view id="shopping-cart">
+  <view class="page-section">
+    <view class="weui-cells weui-cells_after-title">
+      <checkbox-group bindchange="checkboxChange">
+        <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+          <view>
+            <view class="weui-cell__hd">
+              <checkbox value="{{item.value}}" checked="{{item.checked}}" />
+
+              <van-swipe-cell id="swipe-cell" right-width="{{ 65 }}" async-close bind:close="onClose">
+                <van-card price="2.00"
+                  title="轻薄折叠机,整机轻至262g,展开厚度5.4mm,骁龙8+旗舰处理器!【点击抢购小米11Ultra】轻薄折叠机,整机轻至262g,展开厚度5.4mm,骁龙8+旗舰处理器!【点击抢购小米11Ultra】轻薄折叠机,整机轻至262g,展开厚度5.4mm,骁龙8+旗舰处理器!【点击抢购小米11Ultra】"
+                  thumb="/images/case-01.jpg">
+                  <view slot="footer">
+                    <van-stepper value="{{ 1 }}" bind:change="onChange" />
+                  </view>
+                </van-card>
+                <view slot="right">删除</view>
+                <van-dialog id="van-dialog" />
+              </van-swipe-cell>
             </view>
-          </van-card>
-          <view slot="right">删除</view>
-          <van-dialog id="van-dialog" />
-        </van-swipe-cell>
-      </label>
-    </checkbox-group>
-  </view>
-</view>
-
-<!-- <view>
-  <van-checkbox-group wx:for="{{skuid}}" value="{{ skuid }}" bind:change="onChange">
-    <van-checkbox name="{{item}}">
-      <van-swipe-cell id="swipe-cell" right-width="{{ 65 }}" async-close bind:close="onClose">
-        <van-card price="2.00" title="轻薄折叠机,整机轻至262g,展开厚度5.4mm,骁龙8+旗舰处理器!【点击抢购小米11Ultra】" thumb="/images/case-01.jpg">
-          <view slot="footer">
-            <van-stepper value="{{ 1 }}" bind:change="onChange" />
           </view>
-        </van-card>
-        <view slot="right">删除</view>
-        <van-dialog id="van-dialog" />
-      </van-swipe-cell>
-    </van-checkbox>
-  </van-checkbox-group>
-</view> -->
-
-<!-- 去结算栏 -->
-<!-- <van-submit-bar price="{{ 3050 }}" button-text="去结算" bind:submit="onSubmit" /> -->
-
-<van-submit-bar price="{{ 3050 }}" button-text="去结算" bind:submit="onClickButton" tip="{{ true }}">
-  <van-tag type="primary">
-    <van-checkbox value="{{ checkeAll }}" bind:change="checkAll" icon-size="15px">
-      全选
-    </van-checkbox>
-  </van-tag>
-  <!-- <view slot="tip">您的收货地址不支持同城送, <text>修改地址</text></view> -->
-</van-submit-bar>
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  <van-submit-bar price="{{ 3050 }}" button-text="去结算" bind:submit="onClickButton" tip="{{ true }}">
+    <van-tag type="primary">
+      <van-checkbox value="{{ checkeAll }}" bind:change="checkAll" icon-size="15px">
+        全选
+      </van-checkbox>
+    </van-tag>
+    <!-- <view slot="tip">您的收货地址不支持同城送, <text>修改地址</text></view> -->
+  </van-submit-bar>
+</view>

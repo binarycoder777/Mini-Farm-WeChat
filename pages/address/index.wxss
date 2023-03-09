@@ -1,0 +1,9 @@
+.custom-icon {
+  margin-left: 10px;
+}
+
+#add-address{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}

@@ -1,0 +1,9 @@
+<view id="address-item" wx:for="{{3}}">
+  <van-cell center title="重庆理工大学" value="重庆市重庆理工大学花溪校区" label="韦滔 183***1670">
+    <van-icon bindtap="editAddress" slot="right-icon" name="edit" class="custom-icon" />
+    <van-icon bindtap="deleteAddress" slot="right-icon" name="delete" class="custom-icon" />
+  </van-cell>
+</view>
+<view id="add-address">
+  <van-button type="primary" color="red" size="normal" bind:click="addAddress">新增地址</van-button>
+</view>

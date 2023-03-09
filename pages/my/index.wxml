@@ -18,9 +18,9 @@
 </view>
 <!-- 其他信息 -->
 <view>
-  <van-cell is-link title="我的优惠卷" link-type="navigateTo" url="/pages/dashboard/index" />
+  <van-cell is-link title="我的优惠卷" link-type="navigateTo" url="/pages/address/index" />
   <van-cell is-link title="积分兑换" link-type="navigateTo" url="/pages/dashboard/index" />
-  <van-cell is-link title="地址管理" link-type="navigateTo" url="/pages/dashboard/index" />
+  <van-cell is-link title="地址管理" link-type="navigateTo" url="/pages/address/index" />
   <van-cell is-link title="用户设置" link-type="navigateTo" url="/pages/dashboard/index" />
   <van-cell is-link title="在线客服" link-type="navigateTo" url="/pages/dashboard/index" />
   <van-cell is-link title="关于我们" link-type="navigateTo" url="/pages/dashboard/index" />

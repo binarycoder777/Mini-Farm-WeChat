@@ -1,5 +1,18 @@
 /* pages/cart/index.wxss */
+#shopping-cart{
+  position: relative;
+  margin-bottom: 215rpx;
+}
+
 .van-submit-bar{
   position: fixed;
-  bottom: 96rpx !important;
+  line-height: 100%;
+  bottom: 115rpx !important;
+}
+
+.weui-cell__hd{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transform: ; */
 }
